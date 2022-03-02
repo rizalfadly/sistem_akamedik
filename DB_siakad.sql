@@ -302,8 +302,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@admin', NULL, '$2y$10$y1YA5f3ZWsfYfEyvM5d3J.Hbh1.BTN6YzRWXgOWWz.qEgXa0fxG.C', NULL, '2022-02-14 23:26:40', '2022-02-14 23:26:40'),
-(2, 'rizal', 'rizal@admin', NULL, '$2y$10$hPiadPY74IyJzom8ZXu9W.ZE/ZNk5wj9tmWeeb1SumceHP7GQYiQm', NULL, '2022-02-15 22:50:51', '2022-02-15 22:50:51');
+(1, 'admin', 'admin@admin', NULL, '$2y$10$y1YA5f3ZWsfYfEyvM5d3J.Hbh1.BTN6YzRWXgOWWz.qEgXa0fxG.C', NULL, '2022-02-14 23:26:40', '2022-02-14 23:26:40');
 
 --
 -- Indexes for dumped tables
