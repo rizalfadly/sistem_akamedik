@@ -12,20 +12,10 @@
                     <a href="{{ url('/siswa')}}" class="btn btn-sm btn-flat btn-primary btn-primary"><i class="fa fa-backward"></i>  Kembali</a>
                 </p>
             </div>
-            <div class="box-body">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                      </ul>
-                </div>
-            @endif
-
-            <center>
-                <img src="{{ asset($dt->photo) }}" style="width:200px;">
-            </center>
+                <div class="box-body">
+                <center>
+                    <img src="{{asset($dt->photo)}}" style="width:100px;">
+                </center>
 
             <form role="form" method="post" action="{{ url('/siswa/'.$dt->id)}}" enctype="multipart/form-data">
                 @csrf

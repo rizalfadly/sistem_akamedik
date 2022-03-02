@@ -9,7 +9,15 @@
             <div class="box-header">
                 <p>
                     <button class="btn btn-sm btn-flat btn-warning btn-refresh"><i class="fa fa-refresh"></i> Refresh</button>
+                    
                     <a href="{{ url('/siswa/add')}}" class="btn btn-sm btn-flat btn-primary btn-primary"><i class="fa fa-plus"></i> Tambah Data siswa</a>
+
+                    <a href="{{url('siswa')}}" class="btn btn-sm btn-flat btn-info"><i class="fa fa-book"></i> Data Semua Siswa</a>
+
+                    <a href="{{url('siswa/status_aktif')}}" class="btn btn-sm btn-flat btn-success"><i class="fas fa-graduation-cap"></i> Status Siswa Aktif</a>
+
+                    <a href="{{url('siswa/status_nonaktif')}}" class="btn btn-sm btn-flat btn-danger"><i class="fa fa-times"></i> Siswa Non Aktif</a>
+
                 </p>
             </div>
             <div class="box-body">
@@ -31,7 +39,7 @@
                             @foreach ($data as $e=>$dt)
                                 <tr>
                                     <td>
-                                            <a href="{{url('siswa/'.$dt->id)}}" class="btn btn-flat btn-xs btn-warning"><i class="fa fa-pencil"></i></a>
+                                            <a href="{{url('/siswa/'.$dt->id)}}" class="btn btn-flat btn-xs btn-warning"><i class="far fa-edit"></i></a>
                                             <button href="{{url('/siswa/'.$dt->id)}}" class="btn btn-flat btn-xs btn-danger btn-hapus"><i class="fa fa-trash"></i></button>
                                     </td>
                                     <td>{{ $e+1 }}</td>

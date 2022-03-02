@@ -1,4 +1,1 @@
-@extends('layouts.master');
-
-<!-- @section('content')
-    <div  -->
+@extends('layouts.master')

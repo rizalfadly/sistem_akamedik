@@ -1,13 +1,13 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class M_datasiswa extends Model
+class M_guru extends Model
 {
-    protected $table = 'm_datasiswa';
-    protected $primaryKey = 'id';
+    protected $table = 'm_guru';
+    protected $primaryKey = 'guru_id';
 
     public function s_status()
     {

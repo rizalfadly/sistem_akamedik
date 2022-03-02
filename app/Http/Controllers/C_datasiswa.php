@@ -18,6 +18,21 @@ class C_datasiswa extends Controller
         return view('siswa.index', compact('title', 'data'));
     }
 
+    public function aktif() {
+        $title = 'Siswa Aktif';
+        $data = M_datasiswa::where('status',1)->orderBy('nama','asc')->get();
+
+        return view('siswa.index', compact('title', 'data'));
+    }
+    
+
+    public function nonaktif(){
+        $title = 'Siswa Non Aktif';
+        $data = M_datasiswa::where('status',2)->orderBy('nama','asc')->get();
+
+        return view('siswa.index', compact('title', 'data'));
+    }
+
     public function add()
     {
         $title = 'Tambah data Siswa';
@@ -32,14 +47,10 @@ class C_datasiswa extends Controller
             'nama' => 'required',
             'no_hp' => 'required',
             'email' => 'required',
-            'alamat' => 'required',
+            'alamat' => 'required'
         ]);
 
-        $data['nis'] = $request->nis;
-        $data['nama'] = $request->nama;
-        $data['no_hp'] = $request->no_hp;
-        $data['email'] = $request->email;
-        $data['alamat'] = $request->alamat;
+        $data = $request->except(['_token','_method', 'photo']);
         $data['status'] = 1;
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
@@ -97,12 +108,7 @@ class C_datasiswa extends Controller
             'alamat' => 'required',
         ]);
 
-        $data['nis'] = $request->nis;
-        $data['nama'] = $request->nama;
-        $data['no_hp'] = $request->no_hp;
-        $data['email'] = $request->email;
-        $data['alamat'] = $request->alamat;
-        $data['status'] = $request->status;
+        $data = $request->except(['_token','_method', 'photo']);
         //$data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
 
